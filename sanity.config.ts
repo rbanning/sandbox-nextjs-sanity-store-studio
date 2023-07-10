@@ -7,8 +7,8 @@ export default defineConfig({
   name: 'default',
   title: 'the-sandbox-store',
 
-  projectId: 'm766nc0x',
-  dataset: 'production',
+  projectId: process.env.SANITY_PROJECT_ID ?? '',
+  dataset: process.env.SANITY_DATABASE ?? '',
 
   plugins: [deskTool(), visionTool()],
 
